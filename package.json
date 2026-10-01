@@ -1,0 +1,26 @@
+{
+  "name": "express-front-controller-typed",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "",
+  "scripts": {
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "serve": "bun run serve:basic",
+    "serve:basic": "cd basic && bunx tsc && bun src/front-controller.ts",
+    "types": "bun run types:basic && bun run types:advanced",
+    "types:basic": "cd basic && bunx tsc --noEmit"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/jsonwebtoken": "^9.0.7",
+    "@types/node": "^22.10.2",
+    "prettier": "^3.9.6",
+    "typescript": "^5.7.2"
+  }
+}
